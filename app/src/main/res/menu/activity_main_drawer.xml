@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_bookmarks"
+            android:icon="@drawable/ic_nav_my_bookmarks"
+            android:title="My Bookmarks" />
+        <item
+            android:id="@+id/nav_starred_bookmarks"
+            android:icon="@drawable/ic_nav_starred"
+            android:title="Starred" />
+        <item
+            android:id="@+id/nav_shared_with_me"
+            android:icon="@drawable/ic_nav_shared_me"
+            android:title="Shared with Me" />
+        <item
+            android:id="@+id/nav_add_bookmark"
+            android:icon="@drawable/ic_nav_add_bookmark"
+            android:title="Add Bookmark" />
+        <item
+            android:id="@+id/nav_share_bookmarks"
+            android:icon="@drawable/ic_nav_share"
+            android:title="Share Bookmarks" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_account"
+                android:icon="@drawable/ic_nav_account"
+                android:title="My Account" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_nav_about"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_nav_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

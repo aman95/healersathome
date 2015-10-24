@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="3dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/ic_recyclerview_bookmark_initial"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:text="W"
+                android:id="@+id/bookmark_item_initial"
+                android:textColor="#ffffff"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:text="Title"
+                android:id="@+id/bookmark_item_title"
+                android:singleLine="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/bookmark_item_initial"
+                android:layout_toStartOf="@+id/bookmark_item_expand"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColorLink="@android:color/tertiary_text_dark"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:text="http://example.com"
+                android:id="@+id/bookmark_item_url"
+                android:layout_toStartOf="@+id/bookmark_item_expand"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/bookmark_item_initial"
+                android:layout_below="@+id/bookmark_item_title" />
+            
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_recyclerview_bookmark_darrow"
+                android:clickable="true"
+                android:id="@+id/bookmark_item_expand"
+                />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>
