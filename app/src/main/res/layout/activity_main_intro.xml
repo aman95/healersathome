@@ -1,55 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#37474F"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
     tools:context="com.aman_kumar.bookmarks360.intro.MainIntro">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/banner"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/ic_app_name"
-        android:layout_gravity="center_horizontal|top" />
+        android:id="@+id/imageView4"
+        android:src="@drawable/scree_healer_2"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentStart="true" />
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:alpha="0.8"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="112dp"
+        android:padding="20dp">
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_gravity="center"
-        android:visibility="gone"/>
-    <!--<Button-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Healers at Home"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="100dp" />
+    </LinearLayout>
+</RelativeLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="16dp"-->
+    <!--android:background="#37474F"-->
+    <!--tools:context="com.aman_kumar.bookmarks360.intro.MainIntro">-->
+
+
+    <!--<ImageView-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:text="Sign Out"-->
-        <!--android:id="@+id/sign_out_button"-->
-        <!--android:layout_below="@+id/sign_in_button"/>-->
+        <!--android:id="@+id/banner"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:src="@drawable/ic_app_name"-->
+        <!--android:layout_gravity="center_horizontal|top" />-->
 
-    <!--<TextView-->
+    <!--<com.google.android.gms.common.SignInButton-->
+        <!--android:id="@+id/sign_in_button"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal|bottom" />-->
+
+    <!--<ProgressBar-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
-        <!--android:text="New Text"-->
-        <!--android:id="@+id/textView2"-->
-        <!--android:layout_below="@+id/sign_out_button"-->
-        <!--android:layout_alignParentStart="true" />-->
+        <!--android:id="@+id/progressBar"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:visibility="gone"/>-->
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Sign Out"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/sign_out_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_below="@+id/sign_in_button"/>&ndash;&gt;-->
 
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Token"-->
-        <!--android:id="@+id/token"-->
-        <!--android:layout_below="@+id/imageView2"-->
-        <!--android:layout_toEndOf="@+id/sign_in_button" />-->
-</FrameLayout>
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="New Text"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/textView2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_below="@+id/sign_out_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentStart="true" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Token"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/token"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_below="@+id/imageView2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_toEndOf="@+id/sign_in_button" />&ndash;&gt;-->
+<!--</FrameLayout>-->

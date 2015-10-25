@@ -1,7 +1,6 @@
 package com.aman_kumar.bookmarks360.adapters;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             super(itemView);
             bookmarkTitle = (TextView)itemView.findViewById(R.id.bookmark_item_title);
             bookmarkUrl = (TextView) itemView.findViewById(R.id.bookmark_item_url);
-            bookmarkInitial = (TextView) itemView.findViewById(R.id.bookmark_item_initial);
+            bookmarkInitial = (TextView) itemView.findViewById(R.id.doctor_initial);
         }
     }
 

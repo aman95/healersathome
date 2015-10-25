@@ -38,13 +38,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceListItem"
-                android:text="Title"
-                android:id="@+id/bookmark_item_title"
+                android:text="Doctor Name"
+                android:id="@+id/doctor_name"
                 android:singleLine="true"
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@+id/doctor_initial"
-                android:layout_toStartOf="@+id/bookmark_item_expand"/>
+                android:layout_toStartOf="@+id/doctor_distance"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,21 +53,22 @@
                 android:singleLine="true"
                 android:textColorLink="@android:color/tertiary_text_dark"
                 android:textColor="@android:color/tertiary_text_dark"
-                android:text="http://example.com"
-                android:id="@+id/bookmark_item_url"
-                android:layout_toStartOf="@+id/bookmark_item_expand"
+                android:text="Clinic Name"
+                android:id="@+id/clinic_name"
+                android:layout_toStartOf="@+id/doctor_distance"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="0dp"
                 android:layout_toEndOf="@+id/doctor_initial"
-                android:layout_below="@+id/bookmark_item_title" />
-            
-            <ImageView
+                android:layout_below="@+id/doctor_name" />
+
+            <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_recyclerview_bookmark_darrow"
+                android:text="500m"
                 android:clickable="true"
-                android:id="@+id/bookmark_item_expand"
+                android:id="@+id/doctor_distance"
+                android:gravity="center"
                 />
 
 

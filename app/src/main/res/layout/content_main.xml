@@ -12,7 +12,60 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_container"/>
+        android:id="@+id/fragment_container">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/physio_selector"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:onClick="changePhysio"
+                android:id="@+id/phy_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Find a Physiotherapist"
+                    android:id="@+id/textView2"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/yoga3_selector"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:onClick="changeYoga"
+                android:id="@+id/yoga_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Find a Yoga Instructor"
+                    android:id="@+id/textView3"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
 
 
 </RelativeLayout>

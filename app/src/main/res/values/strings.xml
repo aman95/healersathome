@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bookmarks 360</string>
+    <string name="app_name">Healers At Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -67,4 +67,6 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_find_physio">FIndPhysio</string>
+    <string name="title_activity_book_doctor">BookDoctor</string>
 </resources>

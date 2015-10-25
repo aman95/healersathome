@@ -2,7 +2,9 @@ package com.aman_kumar.bookmarks360;
 
 import android.app.FragmentManager;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,9 +20,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.aman_kumar.bookmarks360.activities.SettingsActivity;
+import com.aman_kumar.bookmarks360.fragments.FindPhysio;
 import com.aman_kumar.bookmarks360.fragments.MyBookmarks;
 import com.aman_kumar.bookmarks360.fragments.NewBookmarks;
 import com.aman_kumar.bookmarks360.utils.SharedPrefs;
@@ -33,6 +37,8 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar;
     TextView userEmail, userName;
 
+    NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +50,10 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Calling Healers At Home...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "+91-9555415551"));
+                startActivity(intent);
             }
         });
 
@@ -55,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         /*
@@ -63,19 +71,48 @@ public class MainActivity extends AppCompatActivity
          */
         View v = navigationView.inflateHeaderView(R.layout.nav_header_main);
         ((TextView)v.findViewById(R.id.username)).setText(SharedPrefs.getPrefs("userName", "Guest"));
-        ((TextView)v.findViewById(R.id.useremail)).setText(SharedPrefs.getPrefs("userEmail","No Email!!!"));
-        Picasso.with(this).load(SharedPrefs.getPrefs("userDP", "http://placehold.it/128x128")).into((ImageView)v.findViewById(R.id.userDP));
+        ((TextView)v.findViewById(R.id.useremail)).setText(SharedPrefs.getPrefs("userEmail", "No Email!!!"));
+        Picasso.with(this).load(SharedPrefs.getPrefs("userDP", "http://placehold.it/128x128")).into((ImageView) v.findViewById(R.id.userDP));
 
 
 
         fragmentManager = getFragmentManager();
+//        RelativeLayout phyLayout  = (RelativeLayout)findViewById(R.id.phy_layout);
+//        phyLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                navigationView.setCheckedItem(R.id.nav_my_bookmarks);
+//                toolbar.setTitle("My Bookmarks");
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.fragment_container, MyBookmarks.newInstance("", "My Bookmarks"))
+//                        .commit();
+//            }
+//        });
 
-        navigationView.setCheckedItem(R.id.nav_my_bookmarks);
-        toolbar.setTitle("My Bookmarks");
+//        navigationView.setCheckedItem(R.id.nav_my_bookmarks);
+//        toolbar.setTitle("My Bookmarks");
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, MyBookmarks.newInstance("" , "My Bookmarks"))
+//                .commit();
+
+    }
+
+    public void changePhysio(View v) {
+        navigationView.setCheckedItem(R.id.nav_find_physio);
+                toolbar.setTitle("Physiotherapists");
         fragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, MyBookmarks.newInstance("" , "My Bookmarks"))
+                .replace(R.id.fragment_container, FindPhysio.newInstance()).addToBackStack(null).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .commit();
+        toolbar.setTitle("Physiotherapists");
+    }
 
+    public void changeYoga(View v) {
+        navigationView.setCheckedItem(R.id.nav_find_physio);
+        toolbar.setTitle("Physiotherapists");
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, FindPhysio.newInstance())
+                .commit();
+        toolbar.setTitle("Yoga Instructors");
     }
 
     @Override
@@ -118,18 +155,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_my_bookmarks) {
+        if (id == R.id.nav_find_physio) {
             fragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, MyBookmarks.newInstance("" + id, "My Bookmarks"))
+                    .replace(R.id.fragment_container, FindPhysio.newInstance())
                     .commit();
-            toolbar.setTitle("My Bookmarks");
+            toolbar.setTitle("Physiotherapists");
 
 
         } else if (id == R.id.nav_share_bookmarks) {
 
         } else if (id == R.id.nav_shared_with_me) {
 
-        } else if (id == R.id.nav_starred_bookmarks) {
+        } else if (id == R.id.nav_find_yoga) {
 
         } else if (id == R.id.nav_add_bookmark) {
             fragmentManager.beginTransaction()

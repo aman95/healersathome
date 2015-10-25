@@ -7,6 +7,7 @@
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".App"
@@ -18,11 +19,15 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".activities.SettingsActivity"
@@ -32,13 +37,44 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.aman_kumar.bookmarks360.MainActivity" />
         </activity>
-        <activity android:name=".intro.MainIntro"
-            android:theme="@style/AppTheme.TranslucentStatusBar">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDguLuPqRTemR-61cabUlIW6qffxh1C-dM" />
+
+        <activity
+            android:name=".intro.MainIntro"
+            android:theme="@style/AppTheme.TranslucentStatusBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!--<activity-->
+            <!--android:name=".activities.FindPhysio"-->
+            <!--android:label="@string/title_activity_find_physio"-->
+            <!--android:configChanges="orientation"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:parentActivityName=".MainActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar" >-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value="com.aman_kumar.bookmarks360.MainActivity" />-->
+        <!--</activity>-->
+        <activity
+            android:name=".activities.BookDoctor"
+            android:label="@string/title_activity_book_doctor"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aman_kumar.bookmarks360.MainActivity" />
         </activity>
     </application>
 

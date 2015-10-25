@@ -3,25 +3,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_my_bookmarks"
-            android:icon="@drawable/ic_nav_my_bookmarks"
-            android:title="My Bookmarks" />
+            android:id="@+id/nav_find_physio"
+            android:icon="@drawable/ic_nav_yoga"
+            android:title="Physiotherepists" />
         <item
-            android:id="@+id/nav_starred_bookmarks"
-            android:icon="@drawable/ic_nav_starred"
-            android:title="Starred" />
+            android:id="@+id/nav_find_yoga"
+            android:icon="@drawable/ic_nav_phy"
+            android:title="Yoga Instructors" />
         <item
             android:id="@+id/nav_shared_with_me"
             android:icon="@drawable/ic_nav_shared_me"
-            android:title="Shared with Me" />
+            android:title="Appointments" />
         <item
             android:id="@+id/nav_add_bookmark"
-            android:icon="@drawable/ic_nav_add_bookmark"
-            android:title="Add Bookmark" />
+            android:icon="@drawable/ic_nav_ask"
+            android:title="Ask the Docs" />
         <item
             android:id="@+id/nav_share_bookmarks"
-            android:icon="@drawable/ic_nav_share"
-            android:title="Share Bookmarks" />
+            android:icon="@drawable/ic_nav_notifications"
+            android:title="Notifications" />
     </group>
 
     <item android:title="Settings">
@@ -29,7 +29,7 @@
             <item
                 android:id="@+id/nav_account"
                 android:icon="@drawable/ic_nav_account"
-                android:title="My Account" />
+                android:title="My Profile" />
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_nav_about"
