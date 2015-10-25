@@ -19,6 +19,6 @@ It also has a feedback system where the users can rate and review the physiother
     <li>Option to chat with the physiotherapist to ask any doubts.</li>
     <li>Booking appointments on weekly and daily basis.</li>
     <li>Notifications and reminders to users about their coming appointments.</li>
-    <liDaily notifications to users regarding health tips.</li>
+    <li>Daily notifications to users regarding health tips.</li>
     <li>Storing the user's health records.</li>
   </ol>
