@@ -6,15 +6,19 @@ The application enables its users to view the physiotherapists/yoga trainers ava
 It also has a feedback system where the users can rate and review the physiotherapists/yoga trainers.
 
 ##Main Features (Currenty implemented)
-  1) Google+ Login.
-  2) Visualisation of nearest physiotherapists on a map.
-  3) Booking an appointment.
-  4) Rate and Review system.
-  5) Direct call to 'Healers At Home' customer care.
+  <ol>
+    <li>Google+ Login.</li>
+    <li>Visualisation of nearest physiotherapists on a map.</li>
+    <li>Booking an appointment.</li>
+    <li>Rate and Review system.</li>
+    <li>Direct call to 'Healers At Home' customer care.</li>
+  </ol>
   
 ##Features to be implemented further
-  1) Option to chat with the physiotherapist to ask any doubts.
-  2) Booking appointments on weekly and daily basis.
-  3) Notifications and reminders to users about their coming appointments.
-  4) Daily notifications to users regarding health tips.
-  5) Storing the user's health records.
+  <ol>
+    <li>Option to chat with the physiotherapist to ask any doubts.</li>
+    <li>Booking appointments on weekly and daily basis.</li>
+    <li>Notifications and reminders to users about their coming appointments.</li>
+    <liDaily notifications to users regarding health tips.</li>
+    <li>Storing the user's health records.</li>
+  </ol>
